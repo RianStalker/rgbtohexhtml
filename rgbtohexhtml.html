@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="Colors">
+    <head>
+        <title>Page Title</title>
+            
+        <meta charset="UTF-8">
+        <meta name="description" content="Form Validation">
+        <meta name="author" content="Blue">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+<!-- [Author] Blue -->
+    <body ng-controller="Color">
+        <div class="well well-lg">
+        <label>Enter Color</label><br/>
+        
+        <input type="number" id="red" class="form-control" ng-model="dec[0]" onkeyup="check(this);">
+        <input type="number" id="green" class="form-control" ng-model="dec[1]" onkeyup="check(this);">
+        <input type="number" id="blue" class="form-control" ng-model="dec[2]" onkeyup="check(this);">
+        <br/><br/>
+        
+        <div class="well" id="color">#{{ checkHex(dec[0].toString(16) || '0') }}{{ checkHex(dec[1].toString(16) || '0') }}{{ checkHex(dec[2].toString(16) || '0') }}</div>
+        </div>
+    </body>
+</html>
